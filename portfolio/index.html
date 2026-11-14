@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="古川昌幸のポートフォリオ。プロジェクトマネジメント、AI・DX、個人開発アプリ、書籍。">
+<title>古川 昌幸｜PM・AI・DX</title>
+<style>
+:root{color-scheme:light;--ink:#192526;--muted:#4b5d5c;--paper:#f7f7ee;--line:#cdd7cb;--accent:#194f43;--dark:#102e29;--mint:#cce4cc;--panel:#e6ecdf}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter","Noto Sans JP",system-ui,sans-serif;line-height:1.7}
+a{color:inherit;text-underline-offset:.22em}
+a:focus-visible{outline:2px solid #b44e25;outline-offset:5px;border-radius:3px}
+.wrap{width:min(1120px,calc(100% - 96px));margin-inline:auto}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:78px}
+.brand{font-weight:750;text-decoration:none;white-space:nowrap}
+nav{display:flex;flex-wrap:wrap;gap:10px 30px;font-size:.85rem;font-weight:650}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:1.18fr .82fr;align-items:center;gap:clamp(30px,6vw,94px);min-height:535px;padding-block:54px 64px}
+.kicker{font-size:.78rem;color:var(--accent);font-weight:750;letter-spacing:.13em;margin:0 0 12px}
+h1,h2,h3,p{overflow-wrap:anywhere}
+h1{font-size:clamp(2.8rem,7.8vw,6.6rem);letter-spacing:-.07em;line-height:1.08;margin:0 0 16px;font-weight:800}
+.role{font-size:clamp(.9rem,2vw,1.27rem);font-weight:650;letter-spacing:.02em;color:var(--accent);margin:0 0 26px}
+.intro{color:var(--muted);max-width:34em;margin:0 0 28px}
+.button{display:inline-flex;align-items:center;gap:20px;text-decoration:none;padding:10px 17px;background:var(--accent);color:#fff;border-radius:4px;font-size:.86rem;font-weight:650;min-height:44px}
+.button:hover{background:#123a31}
+.portrait{background:#d5e4d4;position:relative;margin:0;min-width:0;overflow:hidden;aspect-ratio:1/1;border-radius:5px 76px 5px 5px;display:flex;justify-content:center;align-items:flex-end;isolation:isolate}
+.portrait:before{content:"";position:absolute;inset:12% 12% -25%;border:1px solid #f0f7eb;border-radius:48% 48% 0 0;box-shadow:0 0 0 29px #dfebdc;z-index:-1}
+.portrait img{display:block;max-width:100%;height:97%;object-fit:contain;object-position:center bottom}
+section{scroll-margin-top:20px}
+.work{background:var(--dark);color:#f3f5ec;padding:54px 0 62px}
+.work h2,.projects h2,.contact h2{font-size:clamp(1.7rem,3.7vw,2.8rem);line-height:1.2;letter-spacing:-.035em;margin:0 0 22px}
+.work .kicker{color:#a5d4b8}
+.work article{display:grid;grid-template-columns:minmax(230px,.8fr) 1.2fr;gap:10px 48px;padding:23px 0;border-top:1px solid #42605a}
+.topic{color:#b7d4c1;margin:0 0 4px;font-size:.78rem}
+h3{font-size:1.21rem;line-height:1.45;margin:0}
+.work article>p{margin:0;color:#d6e2d8}
+.projects{padding:63px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cards article{border:1px solid var(--line);padding:23px;background:#fafaf4;border-radius:6px;min-width:0}
+.cards article p:not(.topic){margin-bottom:0;color:var(--muted);font-size:.94rem}
+.app-link{display:inline-block;margin-top:12px;color:var(--accent);font-weight:650;font-size:.87rem}
+.cards h3{font-size:1.34rem}
+.contact{border-top:1px solid var(--line);padding:40px 0 52px}
+.contact .wrap{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.contact h2{margin:0}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:850px){.wrap{width:calc(100% - 52px)}.hero{min-height:auto}.cards{grid-template-columns:repeat(2,1fr)}.cards article:last-child{grid-column:1/-1}}
+@media(max-width:630px){.wrap{width:calc(100% - 34px)}header .wrap{min-height:68px;gap:10px}nav{gap:6px 14px;font-size:.76rem}.hero{grid-template-columns:1fr;padding-block:38px 42px;gap:30px}.portrait{width:min(100%,405px)}.work,.projects{padding-block:38px}.work article,.cards{grid-template-columns:1fr}.work article{gap:7px}.cards article:last-child{grid-column:auto}.contact .wrap{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#work">仕事の実績</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
+<main>
+<div class="hero wrap">
+<div><p class="kicker" lang="en">MASAYUKI FURUKAWA</p><h1>古川 昌幸</h1><p class="role">プロジェクトマネージャー ／ AI・DX</p><p class="intro">Javaでの開発経験を土台に、受託開発と自社プロダクトのPMを担当。顧客課題の整理から、AIの技術検証、開発推進、本番導入・運用まで携わっています。</p><a class="button" href="#work">仕事の実績を見る <span aria-hidden="true">↓</span></a></div>
+<figure class="portrait"><img src="portrait.webp" width="639" height="850" alt="古川昌幸の顔写真"></figure>
+</div>
+<section class="work" id="work"><div class="wrap"><p class="kicker" lang="en">WORK</p><h2>仕事の実績</h2>
+<article><div><p class="topic">自治体DX</p><h3>AIチャットボットの本番導入</h3></div><p>自治体との予算・要件調整から技術検証、設計・構築まで担当。2026年4月の本番導入後は、問い合わせ対応と利用ログをもとに改善を続けています。</p></article>
+<article><div><p class="topic">自社プロダクト</p><h3>人材マッチングサービスの開発PM</h3></div><p>関係者の要望と開発上の制約を整理し、機能の優先順位を決定。初期の開発対象と見送る機能を判断し、チームと仕様をすり合わせました。</p></article>
+<article><div><p class="topic">AI研究開発</p><h3>AI開発手法の評価と業務への適用</h3></div><p>ローカルLLMやAI開発手法を評価し、改善案を開発プロジェクトへ取り入れる仕組みを構築。マーケティング・セールス支援エージェントや、音声入力を使ったプロンプト管理支援にも取り組みました。</p></article>
+</div></section>
+<section class="projects wrap" id="projects"><p class="kicker" lang="en">PROJECTS</p><h2>アプリと書籍</h2><div class="cards">
+<article><p class="topic">iOSアプリ</p><h3>Study PM</h3><p>資格勉強などの学習計画を立て、教材ごとの進み具合を確認するアプリ。曜日ごとに使える時間を設定できます。</p><a class="app-link" href="https://apps.apple.com/jp/app/study-pm/id6821205156">App Storeで見る <span aria-hidden="true">↗</span></a></article>
+<article><p class="topic">iOSアプリ · 開発中</p><h3>PackLoop</h3><p>旅行の持ち物をリストにまとめるアプリ。荷造りから帰る前の忘れ物チェックまでを、ひとつのリストで管理できるよう開発しています。</p></article>
+<article><p class="topic">書籍 · 出版準備中</p><h3>図解でわかる AIのしくみと全体像</h3><p>生成AIを実際の開発でどう使うかを、図解と事例で紹介。AIを使ったiOSアプリ開発や、LLMOpsも扱います。</p></article>
+</div></section>
+</main>
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>リンク</h2>
+    <div class="contact-links">
+      <a class="button" href="https://github.com/masatea">GitHubを見る <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://x.com/masatea_select">Xを見る <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://www.linkedin.com/in/masayuki-furukawa-30b719448/">LinkedInを見る <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
