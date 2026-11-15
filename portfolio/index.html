@@ -36,8 +36,6 @@ section{scroll-margin-top:20px}
 .work h2,.projects h2,.contact h2{font-size:clamp(1.7rem,3.7vw,2.8rem);line-height:1.2;letter-spacing:-.035em;margin:0 0 22px}
 .work .kicker{color:#a5d4b8}
 .experience{margin:-12px 0 26px;color:var(--accent);font-weight:750;font-size:.92rem}
-.work-group+.work-group{margin-top:40px}
-.work-group-title{margin:0 0 14px;font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.35}
 .work article h4{font-size:1.21rem;line-height:1.45;margin:0;overflow-wrap:anywhere}
 .work article{display:grid;grid-template-columns:minmax(230px,.8fr) 1.2fr;gap:10px 48px;padding:23px 0;border-top:1px solid #42605a}
 .topic{color:#b7d4c1;margin:0 0 4px;font-size:.78rem}
@@ -62,10 +60,25 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 @media(max-width:850px){.wrap{width:calc(100% - 52px)}.hero{min-height:auto}.cards{grid-template-columns:repeat(2,1fr)}.cards article:last-child{grid-column:1/-1}}
 @media(max-width:630px){.wrap{width:calc(100% - 34px)}header .wrap{min-height:68px;gap:10px}nav{gap:6px 14px;font-size:.76rem}.hero{grid-template-columns:1fr;padding-block:38px 42px;gap:30px}.portrait{width:min(100%,405px)}.work,.projects{padding-block:38px}.work article,.cards{grid-template-columns:1fr}.work article{gap:7px}.cards article:last-child{grid-column:auto}.contact .wrap{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.featured{padding:0 0 56px}
+.featured h2{font-size:clamp(1.7rem,3.7vw,2.8rem);line-height:1.2;letter-spacing:-.035em;margin:0 0 22px}
+.featured .cards>article{display:flex;flex-direction:column}
+.featured .cards h3{font-size:1.32rem}
+.featured .work-source{color:var(--accent);margin-top:auto;padding-top:10px}
+.featured .cards article:last-child{grid-column:auto}
+.work-group details{border-top:1px solid #42605a}
+.work-group summary{display:list-item;cursor:pointer;padding:16px 0;color:#f3f5ec;font-size:1.15rem;font-weight:700}
+.work-group summary:hover{text-decoration:underline}
+.work-group summary:focus-visible{outline:2px solid #a5d4b8;outline-offset:3px}
+.work-group details article:last-child{padding-bottom:10px}
+.work-group+.work-group{margin-top:8px}
+@media(max-width:850px){.featured .cards{grid-template-columns:1fr}}
+@media(max-width:630px){.featured{padding-bottom:38px}}
+@media print{.work details>article{display:grid!important}}
 </style>
 </head>
 <body id="top">
-<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#development-pm">開発PM</a><a href="#ai-research">AI研究開発</a><a href="#ai-adoption">事業・導入</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#featured">代表実績</a><a href="#work">詳細実績</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
 <main>
 <div class="hero wrap">
 <div>
@@ -75,15 +88,37 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
   <h2 class="value-proposition">開発チームを率い、AIを自ら設計・実装して業務に届ける。</h2>
   <p class="intro">受託開発と自社プロダクトで、要求分析・見積からリリース・運用まで担当してきました。AI研究開発では、MLOpsを活用した営業支援エージェントや、生成AIの使い方を評価・改善する仕組みを開発。自治体向けAIの本番導入と、社内業務へのAI活用の定着も進めています。</p>
   <p class="experience">開発PM 約2年8か月（2026年11月時点） ／ 最大約10名のチーム</p>
-  <a class="button" href="#work">仕事の実績を見る <span aria-hidden="true">↓</span></a>
+  <a class="button" href="#featured">代表実績を見る <span aria-hidden="true">↓</span></a>
 </div>
 <figure class="portrait"><img src="portrait.webp" width="639" height="850" alt="古川昌幸の顔写真"></figure>
 </div>
+<section class="featured wrap" id="featured" aria-labelledby="featured-title">
+  <h2 id="featured-title">代表実績</h2>
+  <div class="cards">
+    <article>
+      <p class="topic">開発PM</p>
+      <h3>約10名の受託開発を、新規リリースから追加開発まで担当</h3>
+      <p>レンタル管理システムの要求分析、リリース、保守運用を担当。2回の追加開発もPMとして進め、初回は実装にも参加しました。</p>
+    </article>
+    <article>
+      <p class="topic">AI本番導入</p>
+      <h3>鹿嶋市のAIチャットボットを市民向けに本番導入</h3>
+      <p>市職員へのヒアリング、予算・要件調整、実証、構築を担当。2026年4月に本格運用を開始しました。</p>
+      <a class="work-source" href="https://www.city.kashima.ibaraki.jp/soshiki/17/90907.html">鹿嶋市の公式発表 <span aria-hidden="true">↗</span></a>
+    </article>
+    <article>
+      <p class="topic">AI研究開発</p>
+      <h3>MLOpsを取り入れた営業データ分析基盤を構築</h3>
+      <p>営業戦略の仮説づくりを支援するAIエージェントを設計。営業実績を複数の手法で分析し、結果を保存・再利用できる基盤を構築しました。</p>
+    </article>
+  </div>
+</section>
 <section class="work" id="work">
 <div class="wrap">
-  <h2>仕事の実績</h2>
-  <section class="work-group" id="development-pm" aria-labelledby="development-pm-title">
-    <h3 class="work-group-title" id="development-pm-title">開発プロジェクトマネジメント</h3>
+  <h2>詳細実績</h2>
+  <div class="work-group">
+    <details id="development-pm">
+      <summary>開発プロジェクトマネジメント</summary>
 <article>
   <div><p class="topic">受託開発・約10名・ウォーターフォール</p><h4>レンタル管理システムの新規開発と2回の追加開発を担当</h4></div>
   <p>宝飾・展示会向けディスプレイのレンタル管理システムで、要求分析、見積、進捗・課題管理、成果物レビュー、リリース、保守運用まで担当。2回の追加開発もPMとして進め、Phase 1.1では自ら実装にも参加しました。</p>
@@ -100,9 +135,11 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
   <div><p class="topic">社内システム・開発PM</p><h4>勤怠提出の仕組みを社内ERPとして構築</h4></div>
   <p>勤怠の提出・管理を効率化する要望を受け、バックオフィス業務の自動化と連携できる社内ERPとして構築を進めました。</p>
 </article>
-  </section>
-  <section class="work-group" id="ai-research" aria-labelledby="ai-research-title">
-    <h3 class="work-group-title" id="ai-research-title">AI研究開発</h3>
+    </details>
+  </div>
+  <div class="work-group">
+    <details id="ai-research">
+      <summary>AI研究開発</summary>
 <article>
   <div><p class="topic">営業データ分析・AIエージェント</p><h4>MLOpsを取り入れたマーケティング・セールス支援エージェント</h4></div>
   <p>営業戦略や次の施策の仮説づくりを支援するエージェントを設計。営業実績の取り込み、複数手法による分析、分析結果の保存・再利用を支える基盤を構築しました。</p>
@@ -127,9 +164,15 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
   <div><p class="topic">個人制作・IoT技術検証</p><h4>カメラと生成AIで誰が入室・退室したかを判定</h4></div>
   <p>カメラが検知した画像と参照画像を生成AIで照合し、写っている人物と、その人が入室したか退室したかを判定する仕組みを試作しました。</p>
 </article>
-  </section>
-  <section class="work-group" id="ai-adoption" aria-labelledby="ai-adoption-title">
-    <h3 class="work-group-title" id="ai-adoption-title">AI導入・事業推進</h3>
+<article>
+  <div><p class="topic">技術検証・PoC</p><h4>画像合成のシミュレーション</h4></div>
+  <p>複数の画像を組み合わせたときの見え方を確認するシミュレーションを試作しました。</p>
+</article>
+    </details>
+  </div>
+  <div class="work-group">
+    <details id="ai-adoption">
+      <summary>AI導入・事業推進</summary>
 <article>
   <div><p class="topic">自治体DX・AI導入</p><h4>鹿嶋市のAIチャットボットを実証から本番運用へ</h4></div>
   <p>市職員へのヒアリングと予算・要件の調整から、実証実験、設計・構築まで一貫して担当。市民向けサービスとして2026年4月に本格運用を開始し、運用後も問い合わせ対応や利用ログをもとに改善を進めています。<br><a class="work-source" href="https://www.city.kashima.ibaraki.jp/soshiki/17/90907.html">鹿嶋市の本格運用のお知らせ <span aria-hidden="true">↗</span></a></p>
@@ -150,7 +193,8 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
   <div><p class="topic">サービス企画・営業支援</p><h4>AIサービスの提案からセミナー、商談機会づくりまで</h4></div>
   <p>AI事業の定例で、既存システムへの機能追加を体験できる入門プランや、商工会と連携した顧客へのアプローチを提案。経営者向けセミナーを月次で企画・実施し、外部イベントで見込み客や協業先候補との接点を作りました。非エンジニア向けのAI開発講座では、カリキュラムと教材の作成、登壇を担当しました。</p>
 </article>
-  </section>
+    </details>
+  </div>
 </div>
 </section>
 <section class="projects wrap" id="projects"><p class="kicker" lang="en">PROJECTS</p><h2>アプリと書籍</h2><div class="cards">
