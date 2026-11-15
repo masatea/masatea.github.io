@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="古川昌幸のポートフォリオ。顧客課題の整理、プロダクトの優先順位付け、AIの技術検証から本番導入までの実績を紹介します。">
+<meta name="description" content="古川昌幸のポートフォリオ。製品の優先順位を決める開発PM、自治体向けAIの本番導入、生成AIの技術検証と業務実装の実績を紹介します。">
 <title>古川 昌幸｜PM・AI・DX</title>
 <style>
 :root{color-scheme:light;--ink:#192526;--muted:#4b5d5c;--paper:#f7f7ee;--line:#cdd7cb;--accent:#194f43;--dark:#102e29;--mint:#cce4cc;--panel:#e6ecdf}
@@ -24,6 +24,7 @@ nav a:hover{text-decoration:underline}
 h1,h2,h3,p{overflow-wrap:anywhere}
 h1{font-size:clamp(2.8rem,7.8vw,6.6rem);letter-spacing:-.07em;line-height:1.08;margin:0 0 16px;font-weight:800}
 .role{font-size:clamp(.9rem,2vw,1.27rem);font-weight:650;letter-spacing:.02em;color:var(--accent);margin:0 0 26px}
+.value-proposition{font-size:clamp(1.35rem,2.5vw,1.85rem);line-height:1.45;margin:0 0 14px}
 .intro{color:var(--muted);max-width:34em;margin:0 0 28px}
 .button{display:inline-flex;align-items:center;gap:20px;text-decoration:none;padding:10px 17px;background:var(--accent);color:#fff;border-radius:4px;font-size:.86rem;font-weight:650;min-height:44px}
 .button:hover{background:#123a31}
@@ -38,6 +39,7 @@ section{scroll-margin-top:20px}
 .topic{color:#b7d4c1;margin:0 0 4px;font-size:.78rem}
 h3{font-size:1.21rem;line-height:1.45;margin:0}
 .work article>p{margin:0;color:#d6e2d8}
+.work-source{display:inline-block;margin-top:8px;color:#b7d4c1;font-size:.88rem}
 .projects{padding:63px 0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .cards article{border:1px solid var(--line);padding:23px;background:#fafaf4;border-radius:6px;min-width:0}
@@ -62,21 +64,32 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 <header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#work">仕事の実績</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
 <main>
 <div class="hero wrap">
-<div><p class="kicker" lang="en">MASAYUKI FURUKAWA</p><h1>古川 昌幸</h1><p class="role">プロジェクトマネージャー ／ AI・DX</p><p class="intro">顧客の課題を聞き、何を作るかを決め、現場で使えるところまで進めるのが強みです。自社プロダクトでは機能の優先順位を判断し、自治体DXではAIの技術検証から本番導入・運用まで担当しました。</p><a class="button" href="#work">仕事の実績を見る <span aria-hidden="true">↓</span></a></div>
+<div>
+  <p class="kicker" lang="en">MASAYUKI FURUKAWA</p>
+  <h1>古川 昌幸</h1>
+  <p class="role">プロジェクトマネージャー ／ AI・DX</p>
+  <h2 class="value-proposition">何を作るかを決め、現場で使えるところまで届ける。</h2>
+  <p class="intro">システム開発10年以上の経験を土台に、最大約10名の開発チームを率いてきました。顧客へのヒアリングで課題を具体化し、利用者の要望や開発上の制約を踏まえてリリース範囲を決定。AI案件では自ら技術を検証・構築し、本番導入と運用まで担当しています。</p>
+  <a class="button" href="#work">仕事の実績を見る <span aria-hidden="true">↓</span></a>
+</div>
 <figure class="portrait"><img src="portrait.webp" width="639" height="850" alt="古川昌幸の顔写真"></figure>
 </div>
 <section class="work" id="work"><div class="wrap"><p class="kicker" lang="en">WORK</p><h2>仕事の実績</h2>
 <article>
-  <div><p class="topic">自社プロダクト</p><h3>人材マッチングサービスの機能選定</h3></div>
-  <p>開発PMとして、関係者の要望を整理し、開発上の制約を踏まえて機能の優先順位を決定。初期リリースに入れる機能と見送る機能を判断し、開発チームと仕様を詰めました。</p>
+  <div><p class="topic">自社プロダクト・開発PM</p><h3>人材マッチングサービスの初期リリース範囲を決定</h3></div>
+  <p>関係者へのヒアリングで要望と課題を整理。各機能の必要性と開発上の制約を踏まえ、初期版に入れる機能と後回しにする機能を自ら判断しました。決めた優先順位を開発チームとすり合わせ、実装できる仕様に落とし込みました。</p>
 </article>
 <article>
-  <div><p class="topic">自治体DX</p><h3>AIチャットボットを実証から本番運用へ</h3></div>
-  <p>自治体職員へのヒアリングから予算・要件の調整、PoC、設計・構築を担当。2026年4月に本番導入し、運用開始後は問い合わせ対応と利用ログをもとに改善を進めています。</p>
+  <div><p class="topic">自治体DX・AI導入</p><h3>鹿嶋市のAIチャットボットを実証から本番運用へ</h3></div>
+  <p>市職員へのヒアリングと予算・要件の調整から、実証実験、設計・構築まで一貫して担当。市民向けサービスとして2026年4月に本格運用を開始し、運用後も問い合わせ対応や利用ログをもとに改善を進めています。<br><a class="work-source" href="https://www.city.kashima.ibaraki.jp/soshiki/17/90907.html">鹿嶋市の本格運用のお知らせ <span aria-hidden="true">↗</span></a></p>
 </article>
 <article>
-  <div><p class="topic">AI研究開発</p><h3>AIの技術検証と業務ツールの開発</h3></div>
-  <p>ローカルLLMやAI開発手法を検証し、結果を開発プロセスの改善につなげました。営業・マーケティングを支援するエージェントや、音声入力でプロンプトを管理するツールも構築しました。</p>
+  <div><p class="topic">AI研究開発・業務実装</p><h3>生成AIの開発手法を評価し、業務ツールを構築</h3></div>
+  <p>ローカルLLMや、プロンプト・コンテキスト・ハーネス設計などを検証し、評価に基づいて改善案を出し、プロジェクトへの導入を支援する仕組みを構築。営業・マーケティングを支援するエージェントや、音声入力でプロンプトを管理するツールも開発しました。</p>
+</article>
+<article>
+  <div><p class="topic">AI活用・人材育成</p><h3>非エンジニア向けAI開発講座を企画・実施</h3></div>
+  <p>非エンジニアが生成AIを使って業務課題を整理し、システムを試作するための講座を設計。カリキュラムの構成、教材と演習環境の準備、講師まで担当しました。</p>
 </article>
 </div></section>
 <section class="projects wrap" id="projects"><p class="kicker" lang="en">PROJECTS</p><h2>アプリと書籍</h2><div class="cards">
