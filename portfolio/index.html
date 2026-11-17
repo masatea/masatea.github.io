@@ -78,6 +78,7 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 @media(max-width:630px){.featured{padding-bottom:38px}.featured .cards{grid-template-columns:1fr}}
 @media print{.work details>article{display:grid!important}}
 .systems .systems-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.systems .cards article:last-child{grid-column:auto}.project-image-link--system{width:100%}.systems .cards article .system-features{margin-top:14px;font-size:.83rem;font-weight:700;color:var(--accent)}.systems .cards article .system-caption{font-size:.75rem;margin-top:8px;text-align:center}@media(max-width:630px){.systems .systems-cards{grid-template-columns:1fr}}
+.system-gallery{margin-top:16px;min-width:0}.gallery-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-inline:contain;border-radius:5px}.gallery-track::-webkit-scrollbar{display:none}.gallery-slide{flex:0 0 100%;min-width:0;margin:0;scroll-snap-align:start;scroll-snap-stop:always}.gallery-slide .project-image-link{margin:0;width:100%;display:block;aspect-ratio:1897/904;overflow:hidden;background:#edf0e9}.gallery-slide img{width:100%;height:100%;object-fit:contain;box-shadow:none}.gallery-placeholder{aspect-ratio:1897/904;display:grid;place-items:center;background:#edf0e9;border:1px dashed var(--line);border-radius:5px;color:var(--muted);font-size:.85rem;box-sizing:border-box}.gallery-slide figcaption{text-align:center;font-size:.84rem;font-weight:650;margin-top:9px;color:var(--muted)}.gallery-controls{display:flex;align-items:center;justify-content:center;gap:11px;margin-top:10px}.gallery-controls button{cursor:pointer;font:inherit;border:1px solid var(--line);background:#fafaf4;color:inherit;border-radius:6px;width:34px;height:34px;display:grid;place-items:center;font-size:1.25rem}.gallery-controls button:disabled{opacity:.35;cursor:default}.gallery-dots{display:flex;gap:3px}.gallery-dots button{width:24px;height:30px;border:0;background:transparent;position:relative}.gallery-dots button::after{content:"";width:8px;height:8px;border-radius:50%;background:#b7beb8;display:block}.gallery-dots button[aria-current="true"]::after{background:var(--accent);width:10px;height:10px}.gallery-count{font-size:.75rem;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
 </style>
 </head>
 <body id="top">
@@ -210,7 +211,14 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 </div>
 </section>
 <section class="projects wrap systems" id="systems" aria-labelledby="systems-title"><p class="kicker" lang="en">SYSTEMS</p><h2 id="systems-title">自作システム</h2><div class="cards systems-cards">
-<article><p class="topic">PM業務支援システム · 自作</p><h3>PM Support</h3><p>プロジェクトマネジメントの実務を効率化するために、自ら企画・設計・開発したシステムです。音声入力に対応するプロンプトマネージャーやWBS管理など、PM業務に必要な機能を一つに集約しています。</p><p class="system-features">音声入力 ／ プロンプト管理 ／ WBS管理 ／ AIオーケストレーション</p><a class="project-image-link project-image-link--system" href="pm-support.webp"><img src="pm-support.webp" width="1897" height="904" alt="PM Supportのプロンプトマネージャー画面（業務情報をマスキング済み）" loading="lazy" decoding="async"></a><p class="system-caption">プロンプトマネージャーの操作画面（業務情報は非表示）</p></article>
+<article><p class="topic">PM業務支援システム · 自作</p><h3>PM Support</h3><p>プロジェクトマネジメントの実務を効率化するために、自ら企画・設計・開発したシステムです。音声入力に対応するプロンプトマネージャーやWBS管理など、PM業務に必要な機能を一つに集約しています。</p><p class="system-features">音声入力 ／ プロンプト管理 ／ WBS管理 ／ AIオーケストレーション</p><div class="system-gallery" data-gallery role="region" aria-roledescription="カルーセル" aria-label="PM Supportの機能画面">
+  <div class="gallery-track" tabindex="0" aria-label="左右にスクロールして機能画面を切り替え">
+    <figure class="gallery-slide"><a class="project-image-link project-image-link--system" href="pm-support.webp"><img src="pm-support.webp" width="1897" height="904" alt="音声入力・プロンプト管理の操作画面" loading="lazy" decoding="async"></a><figcaption>音声入力・プロンプト管理</figcaption></figure>
+    <figure class="gallery-slide"><div class="gallery-placeholder">画像準備中</div><figcaption>WBS管理</figcaption></figure>
+    <figure class="gallery-slide"><div class="gallery-placeholder">画像準備中</div><figcaption>AIオーケストレーション</figcaption></figure>
+  </div>
+  <div class="gallery-controls"><button type="button" data-prev aria-label="前の画面">‹</button><div class="gallery-dots" aria-label="機能画面の選択"><button type="button" data-slide="0" aria-label="音声入力・プロンプト管理" aria-current="true"></button><button type="button" data-slide="1" aria-label="WBS管理" aria-current="false"></button><button type="button" data-slide="2" aria-label="AIオーケストレーション" aria-current="false"></button></div><span class="gallery-count" aria-live="polite">1 / 3</span><button type="button" data-next aria-label="次の画面">›</button></div>
+</div></article>
 </div></section>
 <section class="projects wrap" id="projects"><p class="kicker" lang="en">PROJECTS</p><h2>アプリと書籍</h2><div class="cards">
 <article><p class="topic">iOSアプリ</p><h3>Study PM</h3><p>資格学習の計画と進捗を管理するアプリ。曜日ごとの学習時間を設定でき、進み具合は前日までの計画と実績を比べて判定するように設計しました。企画から開発、App Store公開まで個人で担当しました。</p><a class="app-link" href="https://apps.apple.com/jp/app/study-pm/id6821205156">App Storeで見る <span aria-hidden="true">↗</span></a><a class="project-image-link project-image-link--app" href="https://apps.apple.com/jp/app/study-pm/id6821205156"><img src="study-pm.webp" width="300" height="650" alt="Study PMの学習進捗画面をApp Storeで見る" loading="lazy" decoding="async"></a></article>
@@ -229,5 +237,16 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
     </div>
   </div>
 </footer>
+<script>
+document.querySelectorAll('[data-gallery]').forEach(g=>{
+ const track=g.querySelector('.gallery-track'), slides=Array.from(track.querySelectorAll('.gallery-slide')), dots=Array.from(g.querySelectorAll('[data-slide]')), prev=g.querySelector('[data-prev]'), next=g.querySelector('[data-next]'), count=g.querySelector('.gallery-count');
+ let index=0;
+ const sync=()=>{index=Math.max(0,Math.min(slides.length-1,Math.round(track.scrollLeft/Math.max(1,track.clientWidth))));prev.disabled=index===0;next.disabled=index===slides.length-1;dots.forEach((b,i)=>b.setAttribute('aria-current',String(i===index)));count.textContent=(index+1)+' / '+slides.length;};
+ const go=i=>{const target=Math.max(0,Math.min(slides.length-1,i));track.scrollTo({left:target*track.clientWidth,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});};
+ prev.addEventListener('click',()=>go(index-1));next.addEventListener('click',()=>go(index+1));dots.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
+ track.addEventListener('scroll',sync,{passive:true});track.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();go(index+(e.key==='ArrowRight'?1:-1));}});
+ if('ResizeObserver' in window){new ResizeObserver(()=>{track.scrollLeft=index*track.clientWidth;sync();}).observe(track);}sync();
+});
+</script>
 </body>
 </html>
