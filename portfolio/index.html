@@ -77,10 +77,11 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 @media(max-width:960px){.featured .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.featured{padding-bottom:38px}.featured .cards{grid-template-columns:1fr}}
 @media print{.work details>article{display:grid!important}}
+.systems .systems-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.systems .cards article:last-child{grid-column:auto}.project-image-link--system{width:100%}.systems .cards article .system-features{margin-top:14px;font-size:.83rem;font-weight:700;color:var(--accent)}.systems .cards article .system-caption{font-size:.75rem;margin-top:8px;text-align:center}@media(max-width:630px){.systems .systems-cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
-<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#featured">代表実績</a><a href="#work">詳細実績</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#featured">代表実績</a><a href="#work">詳細実績</a><a href="#systems">自作システム</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
 <main>
 <div class="hero wrap">
 <div>
@@ -208,6 +209,9 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
   </div>
 </div>
 </section>
+<section class="projects wrap systems" id="systems" aria-labelledby="systems-title"><p class="kicker" lang="en">SYSTEMS</p><h2 id="systems-title">自作システム</h2><div class="cards systems-cards">
+<article><p class="topic">PM業務支援システム · 自作</p><h3>PM Support</h3><p>プロジェクトマネジメントの実務を効率化するために、自ら企画・設計・開発したシステムです。音声入力に対応するプロンプトマネージャーやWBS管理など、PM業務に必要な機能を一つに集約しています。</p><p class="system-features">音声入力 ／ プロンプト管理 ／ WBS管理 ／ AIオーケストレーション</p><a class="project-image-link project-image-link--system" href="pm-support.webp"><img src="pm-support.webp" width="1897" height="904" alt="PM Supportのプロンプトマネージャー画面（業務情報をマスキング済み）" loading="lazy" decoding="async"></a><p class="system-caption">プロンプトマネージャーの操作画面（業務情報は非表示）</p></article>
+</div></section>
 <section class="projects wrap" id="projects"><p class="kicker" lang="en">PROJECTS</p><h2>アプリと書籍</h2><div class="cards">
 <article><p class="topic">iOSアプリ</p><h3>Study PM</h3><p>資格学習の計画と進捗を管理するアプリ。曜日ごとの学習時間を設定でき、進み具合は前日までの計画と実績を比べて判定するように設計しました。企画から開発、App Store公開まで個人で担当しました。</p><a class="app-link" href="https://apps.apple.com/jp/app/study-pm/id6821205156">App Storeで見る <span aria-hidden="true">↗</span></a><a class="project-image-link project-image-link--app" href="https://apps.apple.com/jp/app/study-pm/id6821205156"><img src="study-pm.webp" width="300" height="650" alt="Study PMの学習進捗画面をApp Storeで見る" loading="lazy" decoding="async"></a></article>
 <article><p class="topic">iOSアプリ · 開発中</p><h3>PackLoop</h3><p>旅行の持ち物をリストにまとめるアプリ。荷造りから帰る前の忘れ物チェックまでを、ひとつのリストで管理できるよう開発しています。</p></article>
