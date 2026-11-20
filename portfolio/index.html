@@ -83,10 +83,21 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 /* App Store screenshot carousel */
 .app-gallery .gallery-track--portrait .gallery-slide .project-image-link{aspect-ratio:789/1750;width:min(100%,280px);margin-inline:auto;background:transparent}
 .app-gallery .gallery-track--portrait .gallery-slide img{width:100%;height:100%;object-fit:contain}
+
+/* Career timeline */
+.career{padding:46px 0 60px}
+.career h2{font-size:clamp(1.7rem,3.7vw,2.8rem);line-height:1.2;letter-spacing:-.035em;margin:0 0 25px}
+.career-timeline{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.career-timeline li{position:relative;min-width:0;padding:21px 17px 22px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:7px}
+.career-year{display:block;font-size:.83rem;line-height:1.5;font-weight:750;color:var(--accent);margin-bottom:8px}
+.career-detail h3{font-size:1.07rem;margin-bottom:9px}
+.career-detail p{color:var(--muted);font-size:.9rem;line-height:1.7;margin:0}
+@media(max-width:850px){.career-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:630px){.career{padding:32px 0 42px}.career-timeline{grid-template-columns:1fr;gap:11px}.career-timeline li{padding:16px 18px}}
 </style>
 </head>
 <body id="top">
-<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#featured">代表実績</a><a href="#work">詳細実績</a><a href="#systems">自作システム</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#top">古川 昌幸</a><nav aria-label="ページ内ナビゲーション"><a href="#career">経歴</a><a href="#featured">代表実績</a><a href="#work">詳細実績</a><a href="#systems">自作システム</a><a href="#projects">アプリ・書籍</a><a href="#contact">リンク</a></nav></div></header>
 <main>
 <div class="hero wrap">
 <div>
@@ -100,6 +111,16 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 </div>
 <figure class="portrait"><img src="portrait.webp" width="639" height="850" alt="古川昌幸の顔写真"></figure>
 </div>
+<section class="career wrap" id="career" aria-labelledby="career-title">
+  <p class="kicker" lang="en">CAREER</p>
+  <h2 id="career-title">経歴</h2>
+  <ol class="career-timeline">
+    <li><span class="career-year">2011年</span><div class="career-detail"><h3>株式会社スカイウイル</h3><p>ITエンジニアとしてキャリアをスタート。システムの保守・運用を担当。</p></div></li>
+    <li><span class="career-year">2014年</span><div class="career-detail"><h3>イナゾウ株式会社</h3><p>Javaエンジニアへ転向し、システム開発に従事。</p></div></li>
+    <li><span class="career-year">2018年</span><div class="career-detail"><h3>フリーランス</h3><p>Javaエンジニアとして、システム開発案件に参画。</p></div></li>
+    <li><span class="career-year">2024年4月〜現在</span><div class="career-detail"><h3>セルプロモート株式会社</h3><p>プロジェクトマネージャーとして、受託開発・自社プロダクト・AI/DX関連業務を担当。</p></div></li>
+  </ol>
+</section>
 <section class="featured wrap" id="featured" aria-labelledby="featured-title">
   <h2 id="featured-title">代表実績</h2>
   <div class="cards">
