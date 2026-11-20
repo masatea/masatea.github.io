@@ -101,6 +101,29 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 .projects .app-gallery .gallery-track--portrait .gallery-slide{display:flex;flex-direction:column;align-items:center}
 .projects .app-gallery .gallery-track--portrait .gallery-slide figcaption{width:100%;padding:0 4px}
 @media(max-width:630px){.projects .app-gallery .gallery-track--portrait .gallery-slide .project-image-link--app-shot{width:min(100%,230px)}}
+
+/* Align app and book cards across columns despite differing text lengths.
+   Five direct children: category, title, summary, store link, media. */
+@supports (grid-template-rows: subgrid) {
+  #projects > .cards > article {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    align-content: start;
+  }
+  #projects > .cards > article > .app-link { align-self: start; }
+  #projects > .cards > article > .app-gallery,
+  #projects > .cards > article > .project-image-link--book {
+    align-self: start;
+  }
+}
+/* Fallback for browsers without subgrid: reserve a consistent summary area. */
+@supports not (grid-template-rows: subgrid) {
+  #projects > .cards > article { display: flex; flex-direction: column; }
+  #projects > .cards > article > .app-gallery,
+  #projects > .cards > article > .project-image-link--book { margin-top: 22px; }
+  #projects > .cards > article > .app-link { margin-top: auto; }
+}
 </style>
 </head>
 <body id="top">
