@@ -124,6 +124,17 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
   #projects > .cards > article > .project-image-link--book { margin-top: 22px; }
   #projects > .cards > article > .app-link { margin-top: auto; }
 }
+
+/* Two apps + two books: balanced 2-column rows with shared subgrid alignment */
+#projects > .cards {grid-template-columns:repeat(2,minmax(0,1fr))}
+#projects > .cards > article:last-child {grid-column:auto}
+.book-title-link{display:block;overflow:hidden;width:min(100%,240px);margin-inline:auto}
+.book-title-art{aspect-ratio:5/8;width:100%;padding:25px 18px;background:linear-gradient(155deg,#143456,#245d8b 67%,#31729a);border:1px solid #37688e;border-radius:4px;box-shadow:0 3px 12px #17263c24;color:#fff;display:flex;flex-direction:column;justify-content:space-between;text-align:center;gap:14px}
+.book-cover-eyebrow{font-size:.59rem;font-weight:700;letter-spacing:.1em;color:#d5e7f6}
+.book-title-art strong{font-size:clamp(1.25rem,2.6vw,1.78rem);line-height:1.18;letter-spacing:.03em}
+.book-cover-sub{font-size:.67rem;line-height:1.7}
+.book-cover-signature{font-size:.58rem;font-weight:750;letter-spacing:.12em;color:#d5e7f6}
+@media(max-width:630px){#projects > .cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
@@ -297,6 +308,7 @@ h3{font-size:1.21rem;line-height:1.45;margin:0}
 <figure class="gallery-slide"><a class="project-image-link project-image-link--app-shot" href="packloop-country.webp" target="_blank" rel="noopener"><img src="packloop-country.webp" width="789" height="1750" alt="PackLoop：国別注意情報画面" loading="lazy" decoding="async"></a><figcaption>国別注意情報</figcaption></figure></div>
 <div class="gallery-controls"><button type="button" data-prev aria-label="前の画面">‹</button><div class="gallery-dots" aria-label="画面の選択"><button type="button" data-slide="0" aria-label="旅行一覧" aria-current="true"></button><button type="button" data-slide="1" aria-label="荷物の回収チェック" aria-current="false"></button><button type="button" data-slide="2" aria-label="国別注意情報" aria-current="false"></button></div><span class="gallery-count" aria-live="polite">1 / 3</span><button type="button" data-next aria-label="次の画面">›</button></div></div></article>
 <article><p class="topic">書籍 · 販売中</p><h3>図解でわかる AIのしくみと全体像</h3><p>生成AIを実際の開発でどう使うかを、図解と事例で紹介。AIを使ったiOSアプリ開発や、LLMOpsも扱います。</p><a class="app-link" href="https://amzn.asia/d/05CuUghu" target="_blank" rel="noopener noreferrer">Amazonで見る <span aria-hidden="true">↗</span></a><a class="project-image-link project-image-link--book" href="https://amzn.asia/d/05CuUghu" target="_blank" rel="noopener noreferrer"><img src="ai-landscape-2026-kindle-cover.jpg" width="1280" height="2048" alt="『図解でわかる AIのしくみと全体像』のAmazon販売ページを開く" loading="lazy" decoding="async"></a></article>
+<article><p class="topic">書籍 · 販売中 · 英語版</p><h3 lang="en">Japan Before You Go</h3><p>初めて日本を訪れる海外旅行者に向けた英語の旅行ガイド。都市や城、食文化、鉄道、日本の習慣などを、現地に暮らす日本人の視点から紹介しています。</p><a class="app-link" href="https://amzn.asia/d/0dPeRmAR" target="_blank" rel="noopener noreferrer">Amazonで見る <span aria-hidden="true">↗</span></a><a class="project-image-link project-image-link--book book-title-link" href="https://amzn.asia/d/0dPeRmAR" target="_blank" rel="noopener noreferrer" aria-label="Japan Before You GoのAmazon販売ページを開く"><div class="book-title-art" aria-hidden="true"><span class="book-cover-eyebrow">A FIRST-TIMER’S TRAVEL GUIDE</span><strong>JAPAN<br>BEFORE<br>YOU GO</strong><span class="book-cover-sub">Cities · Castles · Food<br>Trains · Japanese Culture</span><span class="book-cover-signature">WRITTEN BY A LOCAL</span></div></a></article>
 </div></section>
 </main>
 <footer class="contact" id="contact">
